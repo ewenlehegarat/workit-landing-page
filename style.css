@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+/* ################# Global ################# */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family: var(--Fraunces);
+}
+
+:root{
+    /* ##### Color #### */
+    --Green: #44FFA1;
+    --Purple-900: #24053E;
+    --Purple-500: #584D62;
+    --Purple-100: #FCF8FF;
+    --White: #FFFFFF;
+
+    /* ##### Font Family #### */
+    --Fraunces: "Fraunces", serif;
+    --Manrope: "Manrope", sans-serif;
+
+    /* ##### Spacing #### */
+    --Spacing-3700: 296px;
+    --Spacing-2100: 168px;
+    --Spacing-1800: 144px;
+    --Spacing-1600: 128px;
+    --Spacing-1400: 112px;
+    --Spacing-1100: 88px;
+    --Spacing-1000: 80px;
+    --Spacing-800: 64px;
+    --Spacing-700: 56px;
+    --Spacing-550: 44px;
+    --Spacing-500: 40px;
+    --Spacing-400: 32px;
+    --Spacing-350: 28px;
+    --Spacing-250: 20px;
+    --Spacing-200: 16px;
+    --Spacing-150: 12px;
+    --Spacing-100: 8px;
+
+    /* ##### Font Size #### */
+    --font-size-18: 16px;
+    --font-size-32: 24px;
+    --font-size-56: 32px;
+    --font-size-80: 48px;
+
+    /* ##### Font Weight #### */
+    --regular: 400;
+    --semi-bold: 600;
+    --bold: 700;
+
+    /* ##### Font Height #### */
+    --Line-height-100: 100%;
+    --Line-height-120: 120%;
+    --Line-height-150: 150%;
+    --Line-height-180: 180%;
+}
+
+
+/* ################# Nav ################# */
+nav{
+    background-color: var(--Purple-900);
+    font-family: var(--Manrope);
+    padding: var(--Spacing-400) var(--Spacing-250) 0 var(--Spacing-250);
+    display: flex;
+    justify-content: space-between;
+    a{
+        color: var(--White);
+        font-family: var(--Manrope);
+        font-weight: var(--bold);
+        line-height: 180%;
+        border-bottom: 3px solid var(--Green);
+        transition: all 300ms ease-out;
+    }
+    a:hover{
+        color: var(--Green);
+    }
+}
+
+
+/* ################# Header ################# */
+header{
+    position: relative;
+    background-color: var(--Purple-900);
+    padding: var(--Spacing-700) var(--Spacing-250) 120px var(--Spacing-250);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h1{
+        color: var(--White);
+        font-size: var(--font-size-80);
+        font-weight: var(--semi-bold);
+        margin-bottom: var(--Spacing-500);
+        text-align: center;
+        span{
+            border-bottom: 3px solid var(--Green);
+        }
+    }
+    button{
+        background-color: var(--Green);
+        border: none;
+        padding: var(--Spacing-150) var(--Spacing-400);
+        font-size: var(--font-size-18);
+        font-weight: var(--bold);
+        font-family: var(--Manrope);
+        color: var(--Purple-900);
+        cursor: pointer;
+        transition: all 300ms ease-out;
+    }
+    button:hover{
+        background-color: var(--Purple-900);
+        border: 2px solid var(--Green);
+        color: var(--Green);
+    }
+}
+header::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 24px;
+    background-color: var(--Purple-900);
+    border-radius: 0 0 150% 150%;
+    left: 0;
+    bottom: -24px;
+}
+
+
+/* ################# Hero ################# */
+.image_hero{
+    width: 320px;
+    height: 184px;
+    z-index: 2;
+    position: absolute;
+    transform: translateY(-80px) translateX(-50%);
+    left: 50%;
+}
+
+
+/* ################# Value ################# */
+.value{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--Spacing-400);
+    padding: var(--Spacing-800) var(--Spacing-250);
+    margin-top: 80px;
+    text-align: center;
+    .value1, .value2, .value3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .bubble{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+            border: 1px solid var(--Purple-500);
+            border-radius: 50%;
+            h3{
+                font-size: 20px;
+                font-weight: var(--semi-bold);
+                line-height: 40px;
+            }
+        }
+        h2{
+            margin-top: 24px;
+            margin-bottom: var(--Spacing-200);
+            font-size: var(--font-size-32);
+            font-weight: var(--semi-bold);
+            line-height: var(--Line-height-120);
+        }
+        p{
+            font-size: var(--font-size-18);
+            font-weight: var(--regular);
+            line-height: 180%;
+        }
+    }
+}
+
+/* ################# Main ################# */
+main{
+    padding: var(--Spacing-1400) var(--Spacing-250) 0 var(--Spacing-250);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    img{
+        width: 280px;
+        height: 280px;
+    }
+    .cta_content{
+        padding: var(--Spacing-400);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        transform: translateY(-48px);
+        gap: var(--Spacing-400);
+        background-color: var(--Purple-900);
+        color: var(--White);
+        h2{
+            font-weight: var(--semi-bold);
+            font-size: 32px;
+            line-height: 120%;
+        }
+        p{
+            font-family: var(--Manrope);
+            font-weight: var(--regular);
+            font-size: var(--font-size-18);
+            line-height: 180%;
+        }
+        button{
+            font-family: var(--Manrope);
+            padding: var(--Spacing-150) var(--Spacing-400);
+            border: none;
+            background-color: var(--Green);
+            font-size: var(--font-size-18);
+            font-weight: var(--bold);
+            line-height: 180%;
+            cursor: pointer;
+            transition: all 300ms ease-out;
+        }
+        button:hover{
+            background-color: var(--Purple-900);
+            color: var(--Green);
+            border: 2px solid var(--Green);
+        }
+    }
+}
+
+/* ################# Footer ################# */
+footer{
+    padding: var(--Spacing-1000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 56px;
+    .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--Spacing-350);
+        img{
+            cursor: pointer;
+        }
+        img:hover{
+            filter: brightness(0);
+        }
+    }
+}
